@@ -30,6 +30,7 @@ with st.sidebar:
     st.header("🔍 Selecciona una noticia")
     titulo_seleccionado = st.selectbox("Títulos disponibles:", df['titulo'])
     umbral = st.slider("Ajustar umbral de relevancia", min_value=0.1, max_value=0.9, value=0.5, step=0.05)
+    max_oraciones = st.slider("Limitar número de oraciones a procesar", min_value=10, max_value=200, value=100, step=10)
 
 def sidebar():
     with st.sidebar:        
@@ -66,7 +67,7 @@ sidebar()
 
 # ----------------- Generar resumen -----------------
 if st.button("📌 Generar Resumen"):
-    resumen, word = resumir_noticia(noticia, modelo, tokenizer, umbral)
+    resumen, word = resumir_noticia(noticia, modelo, tokenizer, umbral, max_oraciones)
     st.subheader("📝 Resumen Generado")
     if resumen:
         for i, oracion in enumerate(resumen, 1):

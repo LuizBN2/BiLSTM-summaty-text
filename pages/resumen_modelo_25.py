@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 from pages.entrenamiento_modelo_25 import limpiar_y_filtrar
 
-def resumir_noticia(noticia, modelo, tokenizer, umbral, max_len=50, max_oraciones):
+def resumir_noticia(noticia, modelo, tokenizer, umbral, max_oraciones, max_len=50):
     # Dividir en oraciones y limpiar
     oraciones = [s.strip() for s in nltk.sent_tokenize(noticia, language='spanish') if len(s.strip()) > 0]
     
