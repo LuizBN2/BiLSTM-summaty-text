@@ -14,6 +14,7 @@ st.title("📝 Ingresar texto para resumir")
 with st.sidebar:
     st.header("⚙️ Parámetros")
     umbral = st.slider("Ajustar umbral de relevancia", min_value=0.1, max_value=0.9, value=0.5, step=0.05)
+    max_oraciones = st.slider("Limitar número de oraciones a procesar", min_value=10, max_value=200, value=100, step=10)
     st.page_link('app_resumen_25.py', label='**🏠 Página Principal**')
     st.page_link('pages/entrenamiento_modelo_25.py', label='**🚀 Reentrenamiento**')
     st.page_link('pages/visualizar_modelo_25.py', label='**🧱 Arquitectura**')
@@ -31,7 +32,7 @@ texto_usuario = st.text_area("Introduce aquí la noticia o el texto completo que
 
 if st.button("📌 Generar Resumen"):
     if texto_usuario.strip():
-        resumen, palabras_clave = resumir_noticia(texto_usuario, modelo, tokenizer, umbral)
+        resumen, palabras_clave = resumir_noticia(texto_usuario, modelo, tokenizer, umbral, max_oraciones)
         st.subheader("📝 Resumen Generado")
         if resumen:
             for i, oracion in enumerate(resumen, 1):
