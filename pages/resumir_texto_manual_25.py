@@ -20,7 +20,7 @@ with st.sidebar:
     mostrar_firma_sidebar()
 
 # ------------------ Cargar modelo y tokenizer ------------------
-modelo = load_model("models/modelo_resumen_bilstm_25.keras")
+modelo = load_model("models/modelo_resumen_bilstm_25.keras", compile=False)
 
 with open("models/tokenizer_resumen_25.pkl", "rb") as f:
     tokenizer = pickle.load(f)
