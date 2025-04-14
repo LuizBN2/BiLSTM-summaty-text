@@ -12,7 +12,7 @@ import numpy as np
 from pages.entrenamiento_modelo_25 import entrenamiento
 from utils.utils import mostrar_firma_sidebar
 
-
+st.set_page_config(page_title="Resumen de Noticias", layout="wide")
 
 st.title("Visualización del Modelo BiLSTM para Resumen de Textos")
 

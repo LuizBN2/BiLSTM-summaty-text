@@ -6,7 +6,7 @@ from utils.utils import mostrar_firma_sidebar
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="Resumen Personalizado", layout="wide")
+st.set_page_config(page_title="Resumen de Noticias", layout="wide")
 
 st.title("📝 Ingresar texto para resumir")
 
