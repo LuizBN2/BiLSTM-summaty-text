@@ -16,7 +16,7 @@ from tensorflow.keras.callbacks import Callback
 from nltk.corpus import stopwords
 import re
 
-st.set_page_config(page_title="Resumen de Noticias", layout="wide")
+#st.set_page_config(page_title="Resumen de Noticias", layout="wide")
 
 from utils.utils import mostrar_firma_sidebar
 
