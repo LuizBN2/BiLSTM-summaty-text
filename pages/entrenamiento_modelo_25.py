@@ -16,13 +16,15 @@ from tensorflow.keras.callbacks import Callback
 from nltk.corpus import stopwords
 import re
 
+st.set_page_config(page_title="Resumen de Noticias", layout="wide")
+
 from utils.utils import mostrar_firma_sidebar
 
 nltk.download('punkt')
 nltk.download('stopwords')
 stop_words = set(stopwords.words('spanish'))
 
-st.set_page_config(page_title="Resumen de Noticias", layout="wide")
+
 
 st.title("🔁 Reentrenar modelo BiLSTM para resumen de noticias")
 
