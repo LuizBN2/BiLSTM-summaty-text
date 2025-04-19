@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from utils.utils import mostrar_firma_sidebar
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
@@ -11,6 +10,7 @@ st.set_page_config(page_title="Resumen de Noticias", layout="wide")
 
 #aquí porque esa página usa streamlit y el set debe quedar primero.
 from pages.resumen_modelo_25 import resumir_noticia
+from utils.utils import mostrar_firma_sidebar
 
 st.title("🧠 Generador de Resúmenes con BiLSTM")
 

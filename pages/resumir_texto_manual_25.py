@@ -1,12 +1,13 @@
 import streamlit as st
 import pickle
 from tensorflow.keras.models import load_model
-from pages.resumen_modelo_25 import resumir_noticia
-from utils.utils import mostrar_firma_sidebar
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Resumen de Noticias", layout="wide")
+
+from pages.resumen_modelo_25 import resumir_noticia
+from utils.utils import mostrar_firma_sidebar
 
 st.title("📝 Ingresar texto para resumir")
 
